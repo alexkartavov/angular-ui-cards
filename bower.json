@@ -1,0 +1,21 @@
+{
+  "name": "angular-ui-cards",
+  "version": "0.0.0",
+  "authors": [
+    "Alexander Kartavov <alexanderk@outlook.com>"
+  ],
+  "description": "Angular UI directive for a Card View data presenter",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.2",
+    "bootstrap": "~3.3.0",
+    "nanoscroller": "~0.8.4"
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS UI Cards demo</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="../bower_components/nanoscroller/bin/css/nanoscroller.css">
+  <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../source/css/uiCards.css">
+  <link rel="stylesheet" href="css/demo.css">
+</head>
+<body ng-app="demoApp" ng-controller="MainCtrl">
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Cards component</h1>
+      <p class="lead">The AngularJS Cards component.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <h2>What?</h2>
+        <p>
+          Angular Cards is an AngularJS UI component that can display list items in a card view.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h2>Features</h2>
+        <ul>
+          <li>Uses the native AngularJS scope for data binding</li>
+          <li>Sorts items on any column</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h2>Examples</h2>
+        <ol>
+          <!--<li><a href="cards.html">Advanced sample</a></li>-->
+        </ol>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>See it in action</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+          <div class="row" id="boundary">
+            <div class="col-lg-6">
+              <h4>Cards UI</h4>
+
+              <ui-cards id="cards1" datasource="list">
+                  <ui-card-field datasource-field="service_type" field-header="Type" />
+                  <ui-card-field datasource-field="first_name" field-header="First Name" />
+                  <ui-card-field datasource-field="last_name" field-header="Last Name" />
+                  <ui-card-template>
+                      <div style="border:1px solid black;">
+                          {{ item.id }} {{ item.service_type }}
+                          <hr/>
+                          <table>
+                              <colgroup>
+                                  <col class="text-right" />
+                                  <col />
+                              </colgroup>
+                              <tbody>
+                                  <tr>
+                                      <td>
+                                          <strong>Name:</strong>
+                                      </td>
+                                      <td>
+                                          {{ item.first_name }} {{ item.last_name }}
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <strong>Phone:</strong>
+                                      </td>
+                                      <td>
+                                          {{ item.phone_number }}
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <strong>Vehicle:</strong>
+                                      </td>
+                                      <td>
+                                          {{ item.model_year }} {{ item.make }} {{ item.model }}
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </ui-card-template>
+              </ui-cards>
+                
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+    
+  <!-- JavaScript -->
+  <!--[if IE 8]>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-shim.min.js"></script>
+  <![endif]-->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.js"></script>
+      
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="../dist/angular-ui-cards.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>
